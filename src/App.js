@@ -19,7 +19,7 @@ class App extends React.Component {
     )
   )
 
-  CountDecreaseHandler() {
+  CountDecreaseHandler = () => {
     if (this.state.count !== 0) {
       this.setState(
         {
@@ -27,7 +27,6 @@ class App extends React.Component {
         }
       )
     }
-
   }
 
 
@@ -57,7 +56,7 @@ class App extends React.Component {
           <div>
             <button onClick={this.CountIncreaseHandler} className="button btn-green" type="submit"><i className='fa fa-2x fa-plus-circle'></i></button>
             <button onClick={this.CountResetHandler} className="button btn-red" type="submit"><i className='fa fa-2x fa-refresh'></i></button>
-            <button onClick={this.CountDecreaseHandler.bind(this)} className="button btn-yellow" type="submit"><i className='fa fa-2x fa-minus-circle'></i></button>
+            <button onClick={this.CountDecreaseHandler} className="button btn-yellow" type="submit"><i className='fa fa-2x fa-minus-circle'></i></button>
           </div>
 
         </div>
